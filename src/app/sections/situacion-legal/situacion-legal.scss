@@ -1,5 +1,5 @@
 /* CONTENEDOR GENERAL */
-.historia-container {
+.legal-container {
   position: relative;
   width: 99%;
   height: 98%;
@@ -8,17 +8,17 @@
   justify-content: center;   
   align-items: center;      
 
-  background-color: #e1eed1; 
-  overflow: auto;          
+  background-color: #e1eed1;
+  overflow: auto;     /* IMPORTANTE: permite zoom */
 }
 
 /* IMAGEN PRINCIPAL */
-.historia-img {
-  height: 100%;        
-  width: auto;          
-  object-fit: contain;   
+.legal-img {
+  height: 100%;         /* ocupa SIEMPRE todo el alto visible */
+  width: auto;          /* mantiene proporción */
+  object-fit: contain;  /* evita deformación */
   display: block;
-  margin: 0 auto;        
+  margin: 0 auto;
 }
 
 /* BOTÓN INICIO */
@@ -54,7 +54,7 @@
     padding: 6px 12px;
   }
 
-  .historia-img {
+  .legal-img {
     height: 100vh;
   }
 }

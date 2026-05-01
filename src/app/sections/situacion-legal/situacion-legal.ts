@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-historia',
+  selector: 'app-situacion-legal',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './historia.html',
-  styleUrl: './historia.scss',
+  templateUrl: './situacion-legal.html',
+  styleUrl: './situacion-legal.scss',
 })
-export class Historia {}
+export class SituacionLegal {}

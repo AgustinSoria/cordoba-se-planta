@@ -1,5 +1,5 @@
 /* CONTENEDOR GENERAL */
-.historia-container {
+.cordoba-container {
   position: relative;
   width: 99%;
   height: 98%;
@@ -13,7 +13,7 @@
 }
 
 /* IMAGEN PRINCIPAL */
-.historia-img {
+.cordoba-img {
   height: 100%;        
   width: auto;          
   object-fit: contain;   
@@ -54,7 +54,7 @@
     padding: 6px 12px;
   }
 
-  .historia-img {
+  .cordoba-img {
     height: 100vh;
   }
 }

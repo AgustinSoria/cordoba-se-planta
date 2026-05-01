@@ -1,0 +1,155 @@
+/* HERO FULLSCREEN */
+.hero-wrapper {
+  width: 100vw;
+  height: 100vh; /* FULL PANTALLA */
+  background-image: url('../../../../public/imagen4.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* CAPA OSCURA LIGERA */
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+.hero-title {
+  font-family: "Castio";
+  font-size: 3.6rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-family: "BlauerNue";
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero-btn {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-family: "BlauerNue";
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.hero-btn.primary {
+  background: #1f5c1a;
+  color: #fff;
+}
+
+.hero-btn.primary:hover {
+  background: #2b7a25;
+}
+
+.hero-btn.secondary {
+  background: rgba(255,255,255,0.75);
+  color: #1a2b15;
+}
+
+.hero-btn.secondary:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* SECCIONES */
+.landing-wrapper {
+  width: 100vw;
+  padding: 60px 0;
+  background: #e1eed1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sections-title {
+  font-family: "Castio";
+  font-size: 2.4rem;
+  margin-bottom: 28px;
+}
+
+/* GRID */
+.sections-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+
+/* BOTONES */
+.section-btn {
+  font-family: "BlauerNue";
+  font-size: 1.2rem;
+  padding: 22px 16px;
+
+  background: rgba(24, 74, 0, 0.45);
+  backdrop-filter: blur(4px);
+  color: #f7f3e8;
+
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  transition: 0.16s ease-in-out;
+}
+
+.section-btn:hover {
+  background: rgba(24, 74, 0, 0.75);
+}
+
+/* ICONO */
+.section-btn .icon {
+  width: 26px;
+  height: 26px;
+  background-image: url('../../../../public/cannabis.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .section-btn {
+    font-size: 1.3rem;
+    padding: 26px;
+  }
+}

@@ -1,5 +1,58 @@
-<h1>Inicio funciona</h1>
+<div class="hero-wrapper">
 
-<button routerLink="/historia">
-  Ir a Historia
-</button>
+  <div class="hero-content">
+    <h1 class="hero-title">Córdoba Se Planta</h1>
+    <p class="hero-subtitle">Marcha por el Cannabis Medicinal</p>
+
+    <div class="hero-buttons">
+      <button class="hero-btn secondary" (click)="scrollToSecciones()">
+        Conocé más
+      </button>
+
+      <button class="hero-btn primary" (click)="goTo('convocatoria')">
+        Participá de la marcha
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECCIONES -->
+<div id="secciones" class="landing-wrapper">
+
+  <h2 class="sections-title">Elegí una sección</h2>
+
+  <div class="sections-grid">
+
+    <button class="section-btn" (click)="goTo('historia')">
+      <span class="icon"></span>
+      <p>Historia del Cannabis</p>
+    </button>
+
+    <button class="section-btn" (click)="goTo('legal')">
+      <span class="icon"></span>
+      <p>Situación Legal</p>
+    </button>
+
+    <button class="section-btn" (click)="goTo('responsable')">
+      <span class="icon"></span>
+      <p>Uso Responsable / Daños</p>
+    </button>
+
+    <button class="section-btn" (click)="goTo('salud')">
+      <span class="icon"></span>
+      <p>Salud</p>
+    </button>
+
+    <button class="section-btn" (click)="goTo('cordoba')">
+      <span class="icon"></span>
+      <p>Córdoba</p>
+    </button>
+
+    <button class="section-btn" (click)="goTo('convocatoria')">
+      <span class="icon"></span>
+      <p>Convocatoria / Identidad</p>
+    </button>
+
+  </div>
+</div>
