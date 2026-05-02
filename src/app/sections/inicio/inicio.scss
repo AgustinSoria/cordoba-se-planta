@@ -79,17 +79,20 @@
 /* SECCIONES */
 .landing-wrapper {
   width: 100vw;
-  padding: 60px 0;
+  height: 99vh;;
   background: #e1eed1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .sections-title {
   font-family: "Castio";
   font-size: 2.4rem;
   margin-bottom: 28px;
+  padding-bottom: 5vh;
+
 }
 
 /* GRID */

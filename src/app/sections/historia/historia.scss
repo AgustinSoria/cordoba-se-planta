@@ -1,24 +1,35 @@
 /* CONTENEDOR GENERAL */
 .historia-container {
   position: relative;
-  width: 99%;
-  height: 98%;
+  width: 100%;
+  height: 100vh;         /* ocupa toda la pantalla */
+
+  overflow: hidden;      /* el scroll lo maneja el wrapper */
+  background-color: #e1eed1;
 
   display: flex;
-  justify-content: center;   
-  align-items: center;      
+  justify-content: center;
+  align-items: center;
+}
 
-  background-color: #e1eed1; 
-  overflow: auto;          
+/* WRAPPER SCROLLEABLE */
+.scroll-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;     /* scroll vertical + horizontal */
+  -webkit-overflow-scrolling: touch; /* suavidad en iOS */
 }
 
 /* IMAGEN PRINCIPAL */
 .historia-img {
-  height: 100%;        
-  width: auto;          
-  object-fit: contain;   
+  width: auto;
+  height: auto;
+  max-width: none;        /* permite zoom */
+  max-height: none;       /* permite scroll */
   display: block;
-  margin: 0 auto;        
+
+  /* importante: permite pinch-zoom */
+  touch-action: pinch-zoom;
 }
 
 /* BOTÓN INICIO */
@@ -37,7 +48,6 @@
   z-index: 10;
   border: none;
   cursor: pointer;
-
   transition: background 0.2s;
 }
 
@@ -45,16 +55,12 @@
   background: rgba(0,0,0,0.7);
 }
 
-/* RESPONSIVE (si hace falta) */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .boton-inicio {
     top: 12px;
     left: 12px;
     font-size: 14px;
     padding: 6px 12px;
-  }
-
-  .historia-img {
-    height: 100vh;
   }
 }
