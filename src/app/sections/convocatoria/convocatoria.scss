@@ -1,29 +1,38 @@
 /* CONTENEDOR GENERAL */
-.convocatoria-container {
+.convovatoria-container {
   position: relative;
-  width: 99%;
-  height: 98%;
+  width: 100%;
+  min-height: 100vh;       /* importante para evitar el corte en iOS */
+  background-color: #e1eed1;
 
-  display: flex;
-  justify-content: center;   
-  align-items: center;      
+  overflow: auto !important;       /* fuerza scroll incluso si hay estilos globales */
+  -webkit-overflow-scrolling: touch !important;
+}
 
-  background-color: #e1eed1; 
-  overflow: auto;          
+/* WRAPPER SCROLLEABLE */
+.scroll-wrapper {
+  width: 100%;
+  height: auto;                 /* dejamos que crezca */
+  overflow: auto !important;    /* prioridad máxima */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* IMAGEN PRINCIPAL */
-.convocatoria-img {
-  height: 100%;        
-  width: auto;          
-  object-fit: contain;   
+.convovatoria-img {
+  width: auto;
+  height: auto;
+
+  min-width: 120%;   /* fuerza scroll horizontal si es necesario */
+  min-height: 180%;  /* fuerza scroll vertical */
+  
   display: block;
-  margin: 0 auto;        
+
+  touch-action: pinch-zoom;
 }
 
-/* BOTÓN INICIO */
+/* BOTON INICIO */
 .boton-inicio {
-  position: absolute;
+  position: fixed;       /* MUY IMPORTANTE: fixed permite scroll libre */
   top: 20px;
   left: 20px;
 
@@ -31,30 +40,10 @@
   background: rgba(0,0,0,0.45);
   border-radius: 6px;
   color: white;
-  text-decoration: none;
   font-weight: 600;
   backdrop-filter: blur(4px);
-  z-index: 10;
+
+  z-index: 9999;
   border: none;
   cursor: pointer;
-
-  transition: background 0.2s;
-}
-
-.boton-inicio:hover {
-  background: rgba(0,0,0,0.7);
-}
-
-/* RESPONSIVE (si hace falta) */
-@media (max-width: 768px) {
-  .boton-inicio {
-    top: 12px;
-    left: 12px;
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-
-  .convocatoria-img {
-    height: 100vh;
-  }
 }
